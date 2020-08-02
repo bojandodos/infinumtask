@@ -89,6 +89,15 @@ body {
     box-sizing: border-box;
     font-size: 1.6rem;
 }
+#new-page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main{
+  flex: 1;
+}
 .min-container {
   width: 100%;
   max-width: 90rem;
@@ -223,6 +232,26 @@ nav ul {
 #load_more:hover {
   cursor: pointer;
 } 
+.home-search {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.search h1 {
+  text-align: center;
+  padding-top: 3rem;
+  font-weight: 100;
+  color: #dc4ba3;
+}
+.search-button {
+ background-color: transparent;
+ border: none;
+}
+.search-field {
+  border: none;
+  font-size: 2rem;
+  width: 12rem;
+}
 /*--------------END HOME-------------*/
 /*--------------START SINGLE-------------*/
 .single-intro {

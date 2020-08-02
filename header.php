@@ -10,10 +10,10 @@
             <?php wp_head(); ?>
         </head>
 
-        <body <?php body_class(); ?>>
+        <body <?php body_class(); ?> id="new-page">
             <header>
                     <div class="container">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="">
+                        <a href="<?php echo get_home_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt=""></a>
                         <nav>
                             <ul>
                                 <li><a href="<?php echo get_home_url(); ?>">Home</a></li>

@@ -5,7 +5,7 @@
                     <section class="home-intro"> 
                         <h1 class="main-header-home">The Unicorn & a Duck</h1>
                         <div class="home-search">
-                            <p>search</p>
+                            <?php get_search_form(); ?>
                         </div>
                     </section> 
                     <section class="featured-article">
