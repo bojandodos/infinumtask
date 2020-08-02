@@ -26,5 +26,10 @@ function main_enqueue() {
 
 add_action( 'wp_enqueue_scripts', 'main_enqueue');
 
+/*
+    ==========================================
+     Activate thumbnails
+    ==========================================
+*/
 
- 
+add_theme_support( 'post-thumbnails' ); 

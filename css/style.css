@@ -187,6 +187,7 @@ nav ul {
 .articles-home {
   display: flex;
   flex-flow: wrap;
+  padding-top: 5rem;
 }
 .articles-home article {
  width: 32%;
@@ -195,6 +196,12 @@ nav ul {
 }
 .articles-home article:nth-of-type(3n+3) {
   margin-right: 0;
+}
+.articles-home article img {
+   height: auto;
+}
+.more-link {
+  color: #dc4ba3;
 }
 /*--------------END HOME-------------*/
 /*--------------START FOOTER-------------*/

@@ -11,3 +11,15 @@
         </head>
 
         <body <?php body_class(); ?>>
+            <header>
+                    <div class="container">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="">
+                        <nav>
+                            <ul>
+                                <li><a href="<?php echo get_home_url(); ?>">Home</a></li>
+                            </ul>
+                        </nav>
+                        <a class="ios-link" href=""><img src="<?php bloginfo('template_directory'); ?>/icons/ic-apple.svg" alt="icon-apple">Get for ios</a>
+                        <a class="owners-link" href=""><img src="<?php bloginfo('template_directory'); ?>/icons/ic-unicorn.svg" alt="icon-unicorn-owners">Unicorn owners</a>
+                    </div>
+                </header>
