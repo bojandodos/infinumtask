@@ -25,6 +25,13 @@
 
                         <?php 
 
+                        $args1 = array(
+                            'post_type' => 'post',
+                            'post_per_page' => -1,
+                        );
+                        $the_query = new WP_Query( $args1 ); 
+
+
                         $args = array(
                             'post_type' => 'post',
                             'paged' => 1,
@@ -32,33 +39,42 @@
 
                         $the_query = new WP_Query( $args ); ?>
 
-                      
-                        <?php if ( $the_query->have_posts() ) : ?>
-                        
-                            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                               
-                                    
-                                <article><a href="<?php the_permalink(); ?>">
+                        <div id="posts" data-count="<?php echo ceil($the_query->found_posts/6); ?>">                    
 
-                                    <?php the_post_thumbnail(); ?>
+                            <?php if ( $the_query->have_posts() ) : ?>
+                            
+                                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                                
+                                        
+                                    <article><a href="<?php the_permalink(); ?>">
 
-                                    <h3><?php the_title(); ?></h3>
+                                        <?php the_post_thumbnail(); ?>
 
-                                    <p class="published"><?php the_time('F jS, Y'); ?></p>
+                                        <h3><?php the_title(); ?></h3>
 
-                                    <p><?php the_excerpt(); ?><span class="more-link">Read more...</span></p>
+                                        <p class="published"><?php the_time('F jS, Y'); ?></p>
 
-                                </a></article>
-                           
+                                        <p><?php the_excerpt(); ?><span class="more-link">Read more...</span></p>
 
-                            <?php endwhile; ?>
-                        
-                        
-                            <?php wp_reset_postdata(); ?>
-                        
-                        <?php else : ?>
-                            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-                        <?php endif; ?>
+                                    </a></article>
+                            
+
+                                <?php endwhile; ?>
+                            
+                            
+                                <?php wp_reset_postdata(); ?>
+                            
+                            <?php else : ?>
+
+                                <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+
+                            <?php endif; ?>
+
+                        </div> 
+
+                        <div class="load-more-container">
+                            <button id="load_more">Load more</button>
+                        </div>
 
                     </section>
                 </div>

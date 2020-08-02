@@ -185,9 +185,11 @@ nav ul {
   color: #adadad;
 }
 .articles-home {
+  padding-top: 5rem;
+}
+.articles-home #posts{
   display: flex;
   flex-flow: wrap;
-  padding-top: 5rem;
 }
 .articles-home article {
  width: 32%;
@@ -203,6 +205,24 @@ nav ul {
 .more-link {
   color: #dc4ba3;
 }
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#load_more {
+  background-color: #dc4ba3;
+  font-size: 2.5rem;
+  font-weight: 100;
+  color: #fff;
+  padding: 2rem 4rem;
+  margin-bottom: 5rem;
+  margin-top: 3rem;
+  border: none;
+}
+#load_more:hover {
+  cursor: pointer;
+} 
 /*--------------END HOME-------------*/
 /*--------------START SINGLE-------------*/
 .single-intro {
