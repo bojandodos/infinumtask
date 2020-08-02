@@ -204,6 +204,76 @@ nav ul {
   color: #dc4ba3;
 }
 /*--------------END HOME-------------*/
+/*--------------START SINGLE-------------*/
+.single-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 40rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.single-intro-content {
+  position: absolute;
+  left: 50%;
+  bottom: 30%;
+  transform: translate(-50%,-50%);
+}
+.single-intro-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+.back-to-home-link {
+  position: absolute;
+  left: 50%;
+  bottom: 3rem;
+  transform: translate(-50%);
+  color: #fff;
+}
+.author-info {
+  text-align: center;
+}
+.author-info img {
+  margin-right: 1rem;
+}
+.author-info span {
+  color: #fff;
+}
+.single h1
+{
+  color: #fff;
+}
+.single-content {
+  padding:  5rem 0;
+}
+.rand-post .container {
+  display: flex;
+}
+.rand-post-left,
+.rand-post-right {
+  width: 50%;
+}
+.rand-post-left img {
+  width: 100%;
+  height: auto;
+}
+.rand-post-right {
+  padding-left: 2%;
+}
+.more-magic-title {
+  font-size: 4rem;
+  font-weight: 100;
+  color: #dc4ba3;
+  text-align: center;
+  padding-bottom: 7rem;
+}
+/*--------------END SINGLE-------------*/
 /*--------------START FOOTER-------------*/
 footer {
  background-color: #f4f4f4;
