@@ -123,6 +123,29 @@ function my_action() {
     
 <?php endif;
 
-	wp_die(); // this is required to terminate immediately and return a proper response
+	wp_die(); 
 }
 
+/*
+    ==========================================
+     Shortcode
+    ==========================================
+*/
+function get_custom_field() {
+  global $post;
+  $field_value = get_post_meta($post->ID, 'shortcode1', true); 
+  $field_value_final = '<p class="quote">' . $field_value . '</p>';
+  return $field_value_final;
+}
+add_shortcode ( 'shortcode1','get_custom_field');
+
+function get_second_custom_field() {
+  global $post;
+  $field_value_new = get_post_meta($post->ID, 'shortcode2', true);
+  $field_value_new_final = '<p class="quote">' . $field_value_new . '</p>'; 
+  return $field_value_new_final;
+}
+add_shortcode ( 'shortcode2','get_second_custom_field');
+
+
+add_theme_support( 'responsive-embeds' );

@@ -13,12 +13,36 @@
                             <img src="<?php bloginfo('template_directory'); ?>/images/img-featured.png">
                         </div>
                         <div class="featured-article-content">
-                            <p class="published">November 4, 2016</p>
-                            <h2>The Legend of the Unicorn - Myths and Legends</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla... <a href="">Read more</a>
-                            </p>
+                            <?php
+
+                                $args = array(
+                                'post_type' => 'post',
+                                'posts_per_page' => 1,
+                                'post__in' => array(44)
+                                );
+
+                                $the_query = new WP_Query( $args ); ?>
+
+                                <?php if ( $the_query->have_posts() ) : ?>
+
+                                    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+                                        <p class="published"><?php the_time('F jS, Y'); ?></p>
+                                        <h2><?php the_title(); ?></h2>
+                                        <p><?php the_excerpt(); ?>... <a href="<?php the_permalink(); ?>"><span class="more-link">Read more</span></a></p>
+
+                                   <?php endwhile; ?>
+                            
+                            
+                            <?php wp_reset_postdata(); ?>
+                        
+                        <?php else : ?>
+
+                            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+
+                          <?php endif; ?>
+
+                           
                         </div>
                     </section>
                     <section class="articles-home">
