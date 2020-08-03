@@ -14,12 +14,16 @@
             <header>
                     <div class="container">
                         <a href="<?php echo get_home_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt=""></a>
-                        <nav>
-                            <ul>
-                                <li><a href="<?php echo get_home_url(); ?>">Home</a></li>
-                            </ul>
-                        </nav>
-                        <a class="ios-link" href=""><img src="<?php bloginfo('template_directory'); ?>/icons/ic-apple.svg" alt="icon-apple">Get for ios</a>
-                        <a class="owners-link" href=""><img src="<?php bloginfo('template_directory'); ?>/icons/ic-unicorn.svg" alt="icon-unicorn-owners">Unicorn owners</a>
+                        <a href="javascript:;" class="toggle-open"  onclick="openNav()"><img src="<?php echo get_template_directory_uri(); ?>/icons/open-menu.svg" alt=""></a>
+                        <div class="right-header" id="navigation">
+                        <a href="javascript:;" class="toggle-close" onclick="closeNav()"><img src="<?php echo get_template_directory_uri(); ?>/icons/close-menu.svg" alt=""></a>   
+                            <nav>
+                                <ul>
+                                    <li><a href="<?php echo get_home_url(); ?>">Home</a></li>
+                                </ul>
+                            </nav>
+                            <a class="ios-link" href=""><img src="<?php bloginfo('template_directory'); ?>/icons/ic-apple.svg" alt="icon-apple">Get for ios</a>
+                            <a class="owners-link" href=""><img src="<?php bloginfo('template_directory'); ?>/icons/ic-unicorn.svg" alt="icon-unicorn-owners">Unicorn owners</a>
+                        </div>    
                     </div>
                 </header>
