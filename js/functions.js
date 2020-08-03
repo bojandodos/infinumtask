@@ -2,10 +2,7 @@
 
 $(document).ready(function() {
 
-    $('#toggle').click(function(){
-	    $(this).toggleClass('open');
-		$('.right-header').slideToggle(300);
-	});
+  
 
 
 });
